@@ -27,6 +27,7 @@ main{
     display: flex;
     flex: 1 0 auto;
     padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 aside {
@@ -84,13 +85,23 @@ a {
 }
 
 .popular-items {
-    flex-grow: 1;
-    flex-basis: 100%;
     padding-left: 10px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
 
-.popular-items__item {
+@media (max-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+
+.grid {
     display: flex;
     background-color: #11233b;
     padding: 10px 10px 10px 10px;
@@ -98,7 +109,7 @@ a {
     flex-basis: calc(33.33% - 20px*2);
 }
 
-.popular-items__item:hover {
+.grid:hover {
     display: flex;
     background-color: #0c192b;
     transition: all 0.2s ease;
