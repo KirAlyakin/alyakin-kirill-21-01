@@ -26,18 +26,24 @@ main{
 
 aside {
     background-color: lightgray;
-    width: 400px;
+    width: 240px;
     padding-left: 10px;
     padding-top: 1px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
+@media screen and (max-width: 520px){
+    aside {
+        display: none;
+    }
+}
+
 hgroup {
     margin: 20px;
 }
 
-article {
+section {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -52,13 +58,13 @@ li {
     padding-bottom: 10px;
 }
 
-section {
+article {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.urls_block {
+.article__urls {
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -67,13 +73,13 @@ section {
     background-color: lightgray;
 }
 
-.popular {
+.popular-items {
     flex-basis: 100%;
     padding-left: 10px;
 }
 
 
-.item {
+.popular-items__item {
     display: flex;
     background-color: lightgray;
     padding: 10px 10px 10px 10px;
