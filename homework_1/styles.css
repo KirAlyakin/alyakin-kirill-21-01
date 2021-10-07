@@ -1,48 +1,70 @@
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.header {
+header {
     padding: 10px 10px;
     display: flex;
     background-color: green;
     color: white;
 }
 
-.main-content {
+main{
     display: flex;
+    flex: 1 0 auto;
+    height: 100%;
 }
 
-.sidebar {
+aside {
     background-color: lightgray;
-    width: 300px;
-    height: 700px;
+    width: 240px;
     padding-left: 10px;
     padding-top: 1px;
+    margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.checkbox {
-    padding-left: 12px;
+@media screen and (max-width: 520px){
+    aside {
+        display: none;
+    }
 }
-.content {
+
+hgroup {
+    margin: 20px;
+}
+
+section {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
 }
 
-.content_top {
-    margin: 20px;
+ul {
+    padding-left: 10px;
 }
 
-.urls {
+li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+article {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.urls_block {
+.article__urls {
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -51,18 +73,13 @@ body {
     background-color: lightgray;
 }
 
-.popular {
+.popular-items {
     flex-basis: 100%;
     padding-left: 10px;
 }
 
-.buy {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-.item {
+.popular-items__item {
     display: flex;
     background-color: lightgray;
     padding: 10px 10px 10px 10px;
@@ -86,13 +103,11 @@ body {
     height: 20px;
 }
 
-.footer {
-    width: 98vw;
+footer {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0;
     background-color: lightgray;
-    padding: 20px 1vw;
+    padding: 20px 10px;
+    flex: 0 0 auto;
 }
