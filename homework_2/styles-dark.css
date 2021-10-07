@@ -1,0 +1,140 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #0a192e;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+main{
+    color: white;
+    background-color: #0a192e;
+    display: flex;
+    flex: 1 0 auto;
+    padding-bottom: 10px;
+}
+
+aside {
+    background-color: #11233b;
+    width: 240px;
+    padding-left: 10px;
+    padding-top: 1px;
+    margin-top: 10px;
+}
+
+@media (max-width: 520px){
+    aside {
+        display: none;
+    }
+}
+
+hgroup {
+    margin: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+ul {
+    padding-left: 10px;
+}
+
+li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article__urls {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex-grow: 1;
+    padding: 40px 10px;
+    background-color: #11233b;
+}
+
+a {
+    color: white;
+    padding-bottom: 5px;
+}
+
+.popular-items {
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding-left: 10px;
+}
+
+
+.popular-items__item {
+    display: flex;
+    background-color: #11233b;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 0 0 ;
+    flex-basis: calc(33.33% - 20px*2);
+}
+
+.popular-items__item:hover {
+    display: flex;
+    background-color: #0c192b;
+    transition: all 0.2s ease;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 0 0 ;
+    flex-basis: calc(33.33% - 20px*2);
+}
+
+.img {
+    height: 60px;
+    width: 60px;
+    background-color: gray;
+    margin-right: 10px;
+}
+
+.button_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.button {
+    height: 20px;
+}
+
+footer {
+    color: white;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #11233b;
+    padding: 20px 10px;
+    flex: 0 0 auto;
+}
+
+@media screen and (max-width: 540px) {
+    aside {
+        display: none;
+    }
+}
