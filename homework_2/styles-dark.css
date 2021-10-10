@@ -15,13 +15,14 @@ header {
     padding: 10px 10px;
     display: flex;
     flex-direction: row;
-    background-color: green;
+    background-color: #0a192e;
     color: white;
     position: relative;
     box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
+    background-color: #0a192e;
     display: flex;
     flex-direction: row;
     padding-bottom: 10px;
@@ -34,7 +35,8 @@ header {
 aside {
     display: flex;
     flex-flow: column wrap;
-    background-color: lightgray;
+    color: white;
+    background-color: #11233b;
     width: 240px;
     padding-left: 10px;
     padding-top: 1px;
@@ -50,9 +52,9 @@ aside {
 main{
     display: flex;
     flex-direction: column;
-    color: black;
+    color: white;
     flex: 1 0 auto;
-    background-color: white;
+    background-color: #0a192e;
     padding-bottom: 10px;
     height: 100%;
     width: calc(100vw - 240px);
@@ -84,10 +86,11 @@ li {
     flex-grow: 1;
     margin: 10px;
     padding: 40px 10px;
-    background-color: lightgray;
+    background-color: #11233b;
 }
 
 a {
+    color: white;
     padding-bottom: 5px;
 }
 
@@ -112,14 +115,14 @@ a {
 
 .popular-items__grid {
     display: flex;
-    background-color: lightgray;
+    background-color: #11233b;
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 0 0 ;
 }
 
-.grid:hover {
+.popular-items__grid:hover {
     display: flex;
-    background-color: lightgray;
+    background-color: #081321;
     transition: all 0.2s ease;
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 0 0 ;
@@ -146,7 +149,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: lightgray;
+    color: white;
+    background-color: #11233b;
     padding: 20px 10px;
     margin-top: auto;
 }
