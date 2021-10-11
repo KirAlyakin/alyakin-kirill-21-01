@@ -1,0 +1,19 @@
+{
+  "name": "homework_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-less": "^5.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "less": "^4.1.2"
+  },
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "",
+  "license": "ISC"
+}
