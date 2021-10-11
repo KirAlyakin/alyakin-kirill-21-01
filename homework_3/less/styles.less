@@ -1,0 +1,171 @@
+@bgcolor_main:#0a192e;
+@bgcolor_secondary:#11233b;
+@hovercolor:#081321;
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: @bgcolor_main;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.loader {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    animation: loadAnim 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loadAnim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.main-container {
+    background-color: @bgcolor_main;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+}
+
+
+aside {
+    display: flex;
+    flex-flow: column wrap;
+    color: white;
+    background-color: @bgcolor_secondary;
+    width: 240px;
+    padding-left: 10px;
+    padding-top: 1px;
+    margin-top: 10px;
+    @media (max-width: 520px) {
+            display: none;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    flex: 1 0 auto;
+    background-color: @bgcolor_main;
+    padding-bottom: 10px;
+    height: 100%;
+    width: calc(100vw - 240px);
+}
+
+hgroup {
+    padding: 20px;
+}
+
+ul {
+    padding-left: 10px;
+}
+
+li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.fishes {
+    display: flex;
+    flex-flow: row wrap;
+    &__urls {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin: 10px;
+        padding: 40px 10px;
+        background-color: @bgcolor_secondary;
+    }
+}
+
+
+
+a {
+    color: white;
+    padding-bottom: 5px;
+}
+
+.popular-items {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    &__grid-container {
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        @media (max-width: 800px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+    }
+    &__grid {
+        display: flex;
+        background-color: @bgcolor_secondary;
+        padding: 10px 10px 10px 10px;
+        margin: 10px 10px 0 0 ;
+    }
+    &__grid:hover {
+        display: flex;
+        background-color: @hovercolor;
+        transition: all 0.2s ease;
+        padding: 10px 10px 10px 10px;
+        margin: 10px 10px 0 0 ;
+        flex-basis: calc(33.33% - 20px*2);
+    }
+    &__img {
+        height: 60px;
+        width: 60px;
+        background-color: gray;
+        margin-right: 10px;
+    }
+    &__button-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    &__button {
+        height: 20px;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background-color: @bgcolor_secondary;
+    padding: 20px 10px;
+    margin-top: auto;
+}
