@@ -1,0 +1,16 @@
+.fishes {
+    display: flex;
+    flex-flow: row wrap;
+}
+.fishes__urls {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 10px;
+    padding: 40px 10px;
+    background-color: #11233b;
+}
+a {
+    color: white;
+    padding-bottom: 5px;
+}

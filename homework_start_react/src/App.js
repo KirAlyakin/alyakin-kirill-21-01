@@ -1,125 +1,59 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
-import AsideList from "./components/sidebar__li/li";
-import apiResponse from './api-mock/api'
+import AsideList from "./components/sidebar/Sidebar";
+import {Mainpar} from "./components/mainHgroup/mainHgroup";
+import {Fishes} from "./components/fishes/fishes";
+import {PopularItems} from "./components/popular-items/popularItems";
+import {apiPopular} from "./components/popular-items/apiPopular";
+
+class App extends React.Component {
+    render() {
+        return(
+        <div className="wrapper">
+            <header>
+                <h1>Интернет магазин "Не только красивое!"</h1>
+            </header>
+
+            <section className="main-container">
+
+                <aside>
+                    <AsideList/>
+                </aside>
+
+                <main>
+                    <Mainpar/>
+
+                    <div className="fishes">
+                        <Fishes
+                            name="Замороженные рыбы"
+                            text="Мы заморозили рыбов для Вас"
+                        />
+                        <Fishes
+                            name="Живые рыбы"
+                            text="На кухню или на разведение"
+                        />
+                    </div>
 
 
-function App() {
-  return (
-      <div className="wrapper">
-        <header>
-          <h1>Интернет магазин "Не только красивое!"</h1>
-        </header>
+                    <section className="popular-items">
 
-        <section className="main-container">
+                        <h1>Популярные</h1>
 
-          <aside>
-            {Fish.map(elem => <AsideList type={elem.type} name={elem.name} />)}
-          </aside>
-
-          <main>
-            <hgroup>
-              <h1>Рыбы на любой вкус</h1>
-              <p>Мы продаём рыбов, а не только показываем</p>
-            </hgroup>
-
-            <section className="fishes">
-
-              <article className="fishes__urls">
-                <a href="#">Замороженные рыбы</a>
-                <span>Мы заморозили рыбов для Вас</span>
-              </article>
-
-              <article className="fishes__urls">
-                <a href="#">Живые рыбы</a>
-                <span>На кухню или на разведение</span>
-              </article>
+                        <article className="popular-items__grid-container">
+                            {apiPopular.map((elem,index) => <PopularItems name ={elem.name} key = {index} />)}
+                        </article>
+                    </section>
+                </main>
 
             </section>
 
-
-            <section className="popular-items">
-
-              <h1>Популярные</h1>
-
-              <article className="popular-items__grid-container">
-                <article className="popular-items__grid">
-                  <picture className="popular-items__img"></picture>
-
-                  <article className="popular-items__button-area">
-                    <a href="#">Палтус</a>
-                    <button className="popular-items__button">Купить</button>
-                  </article>
-
-                </article>
-
-                <article className="popular-items__grid">
-
-                  <picture className="popular-items__img"></picture>
-
-                  <article className="popular-items__button-area">
-                    <a href="#">Сёмга</a>
-                    <button className="popular-items__button">Купить</button>
-                  </article>
-
-                </article>
-
-                <article className="popular-items__grid">
-
-                  <picture className="popular-items__img"></picture>
-
-                  <article className="popular-items__button-area">
-                    <a href="#">Сом</a>
-                    <button className="popular-items__button">Купить</button>
-                  </article>
-
-                </article>
-
-                <article className="popular-items__grid">
-
-                  <picture className="popular-items__img"></picture>
-
-                  <article className="popular-items__button-area">
-                    <a href="#">Сельдь</a>
-                    <button className="popular-items__button">Купить</button>
-                  </article>
-
-                </article>
-
-                <article className="popular-items__grid">
-
-                  <picture className="popular-items__img"></picture>
-
-                  <article className="popular-items__button-area">
-                    <a href="#">Мойва</a>
-                    <button className="popular-items__button">Купить</button>
-                  </article>
-
-                </article>
-
-                <article className="popular-items__grid">
-
-                  <picture className="popular-items__img"></picture>
-
-                  <article className="popular-items__button-area">
-                    <a href="#">Тунец</a>
-                    <button className="popular-items__button">Купить</button>
-                  </article>
-
-                </article>
-
-              </article>
-            </section>
-          </main>
-
-        </section>
-
-        <footer>
-          <span>Контакты</span>
-          <span>© 2021 Рыбов О.А.</span>
-        </footer>
-      </div>
-  );
+            <footer>
+                <span>Контакты</span>
+                <span>© 2021 Рыбов О.А.</span>
+            </footer>
+        </div>
+        )
+    }
 }
 
 export default App;
