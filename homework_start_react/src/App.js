@@ -4,8 +4,8 @@ import AsideList from "./components/sidebar/Sidebar";
 import {Mainpar} from "./components/mainHgroup/mainHgroup";
 import {Fishes} from "./components/fishes/fishes";
 import {PopularItems} from "./components/popular-items/popularItems";
-import {apiPopular} from "./components/popular-items/apiPopular";
-
+import {apiPopular} from "./components/api/apiAll";
+import {apiFish} from "./components/api/apiAll";
 class App extends React.Component {
     render() {
         return(
@@ -23,16 +23,9 @@ class App extends React.Component {
                 <main>
                     <Mainpar/>
 
-                    <div className="fishes">
-                        <Fishes
-                            name="Замороженные рыбы"
-                            text="Мы заморозили рыбов для Вас"
-                        />
-                        <Fishes
-                            name="Живые рыбы"
-                            text="На кухню или на разведение"
-                        />
-                    </div>
+                    <section className="fishes">
+                            {apiFish.map((elem, index) => <Fishes name ={elem.name} text = {elem.text} key = {index} />)}
+                    </section>
 
 
                     <section className="popular-items">
@@ -42,6 +35,9 @@ class App extends React.Component {
                         <article className="popular-items__grid-container">
                             {apiPopular.map((elem,index) => <PopularItems name ={elem.name} key = {index} />)}
                         </article>
+                    </section>
+                    <section>
+                        <todo/>
                     </section>
                 </main>
 
